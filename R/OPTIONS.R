@@ -1,6 +1,5 @@
 ##
-## This file contains code needed to read and process Spöreg data exported
-## from Oracle with the APEX interface.
+## This file contains options for the FishDB database
 ##
 
 ## FishDB options ##################################################################################
@@ -8,7 +7,7 @@
 # This function is not exported to user space and does not need to be documented.
 OPTIONS <- settings::options_manager(
   dbname = "fishdb",
-  host = "193.10.96.167",
+  host = "127.0.0.1",
   port = 5432,
   user = "readonly",
   password="readonly",
@@ -19,7 +18,7 @@ OPTIONS <- settings::options_manager(
 
 # User function that gets exported:
 
-#' Set or get options for reading APEX Spöreg data
+#' Set or get options for connecting to FishBD database
 #'
 #' @param ... Option names to retrieve option values or \code{[key]=[value]} pairs to set options.
 #'
@@ -27,7 +26,7 @@ OPTIONS <- settings::options_manager(
 #' The following options are supported
 #' \itemize{
 #'  \item{\code{dbname} Name of database (Default: fishdb)}
-#'  \item{\code{host} Name or ip-number (Default: 193.10.96.167)}
+#'  \item{\code{host} Name or ip-number (Default: 127.0.0.1)}
 #'  \item{\code{port} Port-number (Default: 5432)}
 #'  \item{\code{user} Username in database (Default: readonly)}
 #'  \item{\code{password} Password for user (Default: readonly)}
