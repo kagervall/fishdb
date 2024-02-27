@@ -2,7 +2,7 @@
 % Please edit documentation in R/OPTIONS.R
 \name{fishdb_options}
 \alias{fishdb_options}
-\title{Set or get options for reading APEX Spöreg data}
+\title{Set or get options for connecting to FishBD database}
 \usage{
 fishdb_options(...)
 }
@@ -10,14 +10,14 @@ fishdb_options(...)
 \item{...}{Option names to retrieve option values or \code{[key]=[value]} pairs to set options.}
 }
 \description{
-Set or get options for reading APEX Spöreg data
+Set or get options for connecting to FishBD database
 }
 \section{Supported options}{
 
 The following options are supported
 \itemize{
 \item{\code{dbname} Name of database (Default: fishdb)}
-\item{\code{host} Name or ip-number (Default: 193.10.96.167)}
+\item{\code{host} Name or ip-number (Default: 127.0.0.1)}
 \item{\code{port} Port-number (Default: 5432)}
 \item{\code{user} Username in database (Default: readonly)}
 \item{\code{password} Password for user (Default: readonly)}
