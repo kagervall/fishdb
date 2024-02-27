@@ -10,7 +10,7 @@
 #' con <- fishdata_connect()
 #'}
 #'
-fishdata_connect <- function() {
+fishdb_connect <- function() {
 
   dbname <- fishdb_options()$dbname
   host <- fishdb_options()$host
@@ -38,9 +38,9 @@ fishdata_connect <- function() {
 #' @export
 #'
 #' @examples
-#' fishdata_disconnect(con)
+#' fishdb_disconnect(con)
 #' 
-fishdata_disconnect <- function(con) {
+fishdb_disconnect <- function(con) {
   if (!DBI::dbIsValid(con)) { stop("invalid connection parameter") }
   DBI::dbDisconnect(con)
   return(invisible(TRUE))
